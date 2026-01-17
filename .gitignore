@@ -12,3 +12,4 @@ wheels/
 # Misc
 pyproject.toml
 game_state.jsonl
+game_events.jsonl
