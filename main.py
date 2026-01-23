@@ -11,8 +11,6 @@ VERSION = pygame.version.ver
 
 
 def main():
-    # print(pygame.Vector2(SCREEN_WIDTH, SCREEN_HEIGHT).y)
-    # return
     print(
         f"Starting Asteroids with pygame version: {VERSION}",
         f"Screen width: {SCREEN_WIDTH}",
