@@ -22,8 +22,6 @@ def main():
     clock = pygame.time.Clock()
     running = True
     dt = 0
-    # group = pygame.sprite.Group()
-    # updatable, drawable = pygame.sprite.Group()
     updatable = pygame.sprite.Group()
     drawable = pygame.sprite.Group()
     asteroids = pygame.sprite.Group()
@@ -40,12 +38,10 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
         screen.fill((0, 0, 0))
-        # player.draw(screen)
         for sprite in drawable:
             sprite.draw(screen)
         pygame.display.flip()
         dt = clock.tick(60) / 1000
-        # player.update(dt)
         updatable.update(dt)
         for asteroid in asteroids:
             if asteroid.collides_with(player):
@@ -54,12 +50,8 @@ def main():
                 sys.exit()
             for shot in shots:
                 if asteroid.collides_with(shot):
-                    # log_event("asteroid_shot")
-                    # asteroid.kill()
                     asteroid.split()
                     shot.kill()
-
-    # pygame.quit()
 
 
 if __name__ == "__main__":
